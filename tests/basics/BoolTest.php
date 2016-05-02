@@ -16,6 +16,8 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function boolStaticMethodWithInvalidParameterTest(){
 		$expected = \Samshal\Rando\Rando::bool('likelihood=>90');
+
+		$this->assertInternalType('boolean', $expected);		
 	}
 
 	/**
@@ -24,5 +26,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function boolStaticMethodWithInexistentOptionTest(){
 		$expected = \Samshal\Rando\Rando::bool(['accuracy'=>90]);
+
+		$this->assertInternalType('boolean', $expected);
 	}
 }
