@@ -16,17 +16,17 @@ class Rando
 
     public static function __callStatic($method, $parameters)
     {
-        return $this->processInstruction($method, $parameters);
+        return self::processInstruction($method, $parameters);
     }
 
-    private function processInstruction($method, $parameters)
+    private static function processInstruction($method, $parameters)
     {
         $parameters = isset($parameters[0]) ? $parameters[0] : [];
         $class = self::instantiatePackage($method);
         return self::getRandoString($class, $parameters);
     }
 
-    private function instantiatePackage($packageName)
+    private static function instantiatePackage($packageName)
     {
         $namespaceDirectories = glob(self::$packagesDirectory.'/*', GLOB_ONLYDIR);
         $packageName = ucfirst(strtolower($packageName));
@@ -43,7 +43,7 @@ class Rando
         return;
     }
 
-    private function getRandoString($class, $parameters)
+    private static function getRandoString($class, $parameters)
     {
         $implementedInterfaces = class_implements($class);
         if (!in_array(self::$commonInterface, $implementedInterfaces)) {
