@@ -4,7 +4,7 @@ Namespace Samshal\Rando\Basics\Tests;
 
 class BoolTest extends \PHPUnit_Framework_TestCase {
 
-	public function boolStaticMethodWithNoParametersTest(){
+	public function testBoolStaticMethodWithNoParameters(){
 		$expected = \Samshal\Rando\Rando::bool();
 
 		$this->assertInternalType('boolean', $expected);
@@ -13,7 +13,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @depends boolStaticMethodWithNoParametersTest
 	 */
-	public function boolStaticExpectTrueTest(){
+	public function testBoolStaticExpectTrue(){
 		$expected = \Samshal\Rando\Rando::bool(['likelihood'=>100]);
 
 		$this->assertEquals(true, $expected);
@@ -22,7 +22,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @depends boolStaticMethodWithNoParametersTest
 	 */
-	public function boolStaticExpectFalseTest(){
+	public function testBoolStaticExpectFalse(){
 		$expected = \Samshal\Rando\Rando::bool(['likelihood'=>0]);
 
 		$this->assertEquals(false, $expected);
@@ -32,7 +32,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	 * @covers \Samshal\Rando\Rando::bool
 	 * @expectedException ArrayParametersExpectedException
 	 */
-	public function boolStaticMethodWithInvalidParameterTest(){
+	public function testBoolStaticMethodWithInvalidParameter(){
 		$expected = \Samshal\Rando\Rando::bool('likelihood=>90');
 
 		$this->assertInternalType('boolean', $expected);		
@@ -42,7 +42,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	 * @covers \Samshal\Rando\Rando::bool 	
 	 * @expectedException OptionNotSupportedException
 	 */
-	public function boolStaticMethodWithInexistentOptionTest(){
+	public function testBoolStaticMethodWithInexistentOption(){
 		$expected = \Samshal\Rando\Rando::bool(['accuracy'=>90]);
 
 		$this->assertInternalType('boolean', $expected);
