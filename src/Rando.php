@@ -16,7 +16,7 @@ class Rando
 
     public static function __callStatic($method, $parameters)
     {
-        return self::processInstruction($method, $parameters);
+        return $this->processInstruction($method, $parameters);
     }
 
     private function processInstruction($method, $parameters)

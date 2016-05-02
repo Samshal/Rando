@@ -30,7 +30,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @covers \Samshal\Rando\Rando::bool
-	 * @expectedException ArrayParametersExpectedException
+	 * @expectedException \Samshal\Rando\Exceptions\ArrayParametersExpectedException
 	 */
 	public function testBoolStaticMethodWithInvalidParameter(){
 		$expected = \Samshal\Rando\Rando::bool('likelihood=>90');
@@ -40,7 +40,7 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @covers \Samshal\Rando\Rando::bool 	
-	 * @expectedException OptionNotSupportedException
+	 * @expectedException \Samshal\Rando\Exceptions\OptionNotSupportedException
 	 */
 	public function testBoolStaticMethodWithInexistentOption(){
 		$expected = \Samshal\Rando\Rando::bool(['accuracy'=>90]);
