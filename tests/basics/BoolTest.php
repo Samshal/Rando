@@ -16,16 +16,16 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	public function boolStaticExpectTrueTest(){
 		$expected = \Samshal\Rando\Rando::bool(['likelihood'=>100]);
 
-		$this->assertInternalType(true, $expected);
+		$this->assertEquals(true, $expected);
 	}
 
 	/**
 	 * @depends boolStaticMethodWithNoParametersTest
 	 */
-	public function boolStaticExpectTrueTest(){
+	public function boolStaticExpectFalseTest(){
 		$expected = \Samshal\Rando\Rando::bool(['likelihood'=>0]);
 
-		$this->assertInternalType(false, $expected);
+		$this->assertEquals(false, $expected);
 	}
 
 	/**
