@@ -11,14 +11,16 @@ class BoolTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * @expectedException	ArrayParametersExpectedException
+	 * @covers \Samshal\Rando\Rando::bool
+	 * @expectedException ArrayParametersExpectedException
 	 */
 	public function boolStaticMethodWithInvalidParameterTest(){
 		$expected = \Samshal\Rando\Rando::bool('likelihood=>90');
 	}
 
 	/**
-	 * @expectedException	OptionNotSupportedException
+	 * @covers \Samshal\Rando\Rando::bool 	
+	 * @expectedException OptionNotSupportedException
 	 */
 	public function boolStaticMethodWithInexistentOptionTest(){
 		$expected = \Samshal\Rando\Rando::bool(['accuracy'=>90]);
