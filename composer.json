@@ -1,0 +1,20 @@
+{
+    "name": "samshal/rando",
+    "description": "Rando is a minimalist generator of random strings, numbers and so on to help reduce some monotony particularly while writing automated tests or anywhere else you need anything random",
+    "type": "Library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samuel Adeshina",
+            "email": "samueladeshina73@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6"
+    },
+    "autoload":{
+        "psr-4":{
+            "Samshal\\Rando\\":"./src"
+        }
+    }
+}
