@@ -1,5 +1,4 @@
 <?php
-
 namespace Samshal\Rando;
 
 class Rando

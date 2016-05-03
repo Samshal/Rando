@@ -39,7 +39,7 @@ class Bool extends Packages implements PackageableInterface
     {
         $booleans = self::generateBooleans();
         
-        return $booleans[array_rand($booleans)];
+        return (boolean)$booleans[array_rand($booleans)];
     }
 
     public function stringify()
