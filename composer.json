@@ -9,8 +9,6 @@
             "email": "samueladeshina73@gmail.com"
         }
     ],
-    "require": {
-    },
     "autoload":{
         "psr-4":{
             "Samshal\\Rando\\":"./src"
