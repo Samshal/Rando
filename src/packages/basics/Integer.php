@@ -11,7 +11,7 @@ class Integer extends Packages implements PackageableInterface
     protected $min;
     protected $max;
 
-    public function setDefaults()
+    public function setDefaults($defaultsArray = [])
     {
         $defaultsArray['min'] = -1 * mt_getrandmax();
         $defaultsArray['max'] = mt_getrandmax();

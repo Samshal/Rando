@@ -12,7 +12,7 @@ class Floating extends Packages implements PackageableInterface
     protected $min;
     protected $max;
 
-    public function setDefaults()
+    public function setDefaults($defaultsArray = [])
     {
         $defaultsArray['fixed'] = 4;
         $defaultsArray['min'] = 0;

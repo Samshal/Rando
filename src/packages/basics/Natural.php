@@ -14,7 +14,7 @@ class Natural extends Packages implements PackageableInterface
     protected $min;
     protected $max;
 
-    public function setDefaults()
+    public function setDefaults($defaultsArray = [])
     {
         $defaultsArray['min'] = 1;
         $defaultsArray['max'] = mt_getrandmax();

@@ -19,7 +19,7 @@ class Character extends Packages implements PackageableInterface
     private $numbers = '0123456789';
     private $specialChars = '!@#$%^&*()';
 
-    public function setDefaults()
+    public function setDefaults($defaultsArray = [])
     {
         $defaultsArray['pool'] = $this->lowerAlphs.$this->upperAlphs.$this->numbers.$this->specialChars;
 

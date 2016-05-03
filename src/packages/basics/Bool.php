@@ -10,7 +10,7 @@ class Bool extends Packages implements PackageableInterface
 
     protected $likelihood;
 
-    public function setDefaults()
+    public function setDefaults($defaultsArray = [])
     {
         $defaultsArray['likelihood'] = 50;
 

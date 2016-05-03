@@ -14,7 +14,7 @@ class String extends Packages implements PackageableInterface
     protected $maxLength;
     protected $length;
 
-    public function setDefaults()
+    public function setDefaults($defaultsArray = [])
     {
         $defaultsArray['minLength'] = 5;
         $defaultsArray['maxLength'] = 20;
