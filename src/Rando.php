@@ -51,7 +51,5 @@ class Rando
             $class->initializeParameters($parameters);
             return $class->stringify();
         }
-
-        return;
     }
 }

@@ -32,11 +32,11 @@ class Integer extends Packages implements PackageableInterface
     private function generateDefaults()
     {
         if (empty($this->min)) {
-            $this->min = $this->setDefaults()['min'];
+           self::setMin($this->setDefaults()['min']);
         }
 
         if (empty($this->max)) {
-            $this->max = $this->setDefaults()['max'];
+            self::setMax($this->max = $this->setDefaults()['max']);
         }
     }
     private function generateInteger()
