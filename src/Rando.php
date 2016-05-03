@@ -54,9 +54,4 @@ class Rando
 
         return;
     }
-
-    public function __toString()
-    {
-        return $class->stringify();
-    }
 }
