@@ -1,3 +1,4 @@
 vendor/*
-./*.phar
+*.phar
 index.php
+composer.lock
