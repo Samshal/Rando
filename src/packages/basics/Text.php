@@ -6,7 +6,7 @@ use Samshal\Rando\Packages\PackageableInterface;
 use Samshal\Rando\Packages\Packages;
 use Samshal\Rando\Rando;
 
-class String extends Packages implements PackageableInterface
+class Text extends Packages implements PackageableInterface
 {
 
     protected $pool;
