@@ -9,6 +9,9 @@
             "email": "samueladeshina73@gmail.com"
         }
     ],
+    "require":{
+        "j7mbo/twitter-api-php":"dev-master"
+    },
     "autoload":{
         "psr-4":{
             "Samshal\\Rando\\":"./src"
